@@ -1,0 +1,7 @@
+env = Environment(CXX='clang++', CXXFLAGS = '-g -std=c++11 -fcolor-diagnostics')
+env.ParseConfig("pkg-config sdl --libs --cflags")
+
+sources = Glob("src/*.cpp")
+
+env.Program('blobs', sources);
+
